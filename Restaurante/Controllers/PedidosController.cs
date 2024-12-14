@@ -28,7 +28,7 @@ namespace Restaurante.Controllers
         //Para acceder en Postman agrego la ruta ejemplo https://localhost:7215/api/Pedidos/GetAllPedidos
         // en Headers Key : Rol y Value : Socio o Admin 
         /*[AccessFilter(Enumerables.ERol.Admin, Enumerables.ERol.Socio)]*/ //(Enumerables.ERol.Socio, Enumerables.ERol.Admin)]
-        [Authorize(policy: "Socio")]
+        //[Authorize(policy: "Socio")]
         [HttpGet("GetAllPedidos")]
         public async Task<ActionResult<List<PedidoRequestDto>>> GetAllPedidos()
         {
@@ -67,7 +67,7 @@ namespace Restaurante.Controllers
         //  }
 
 
-        [Authorize(policy: "Empleado")]
+        //[Authorize(policy: "Empleado")]
         [HttpGet("pendientes/empleado/{idEmpleado}")]
         public async Task<ActionResult<List<PedidoListarDTO>>> ListarPedidosPendientesPorEmpleado(int idEmpleado)
         {
@@ -82,7 +82,7 @@ namespace Restaurante.Controllers
             }
         }
 
-        [Authorize(policy: "Empleado")]
+        //[Authorize(policy: "Empleado")]
         [HttpPost("cambiarEstadoEnPreparacion")]
         public async Task<ActionResult> CambiarEstadoEnPreparacion( string CodigoPedido, int empleadoId, DateTime tiempoPreparacion)
         {
@@ -97,7 +97,7 @@ namespace Restaurante.Controllers
             }
         }
 
-        [Authorize(policy: "Empleado")]
+        //[Authorize(policy: "Empleado")]
         [HttpPost("cambiarEstadoListoParaServir")]
         public async Task<ActionResult> CambiarEstadoListoParaServir(string CodigoPedido, int empleadoId)
         {
@@ -127,7 +127,7 @@ namespace Restaurante.Controllers
             }
         }
 
-        [Authorize(policy: "Socio")]
+        //[Authorize(policy: "Socio")]
         [HttpGet("GetAllTiempoDemora")] //Va a listar todos los pedidos con sus demoras que esten en estado en preparacion 
         public async Task<ActionResult<List<object>>> GetAllTiempoDemora()
         {
@@ -153,7 +153,7 @@ namespace Restaurante.Controllers
             }
         }
 
-        [Authorize(policy: "Mozo")]
+        //[Authorize(policy: "Mozo")]
         [HttpPut("SiListoParaServirCambiarEstadoMesa/{mesaId}")]
         public async Task<IActionResult> SiListoParaServirCambiarEstadoMesa(int mesaId)
         {
@@ -161,14 +161,14 @@ namespace Restaurante.Controllers
             return Ok(result);
         }
 
-        [Authorize(policy: "Mozo")]
+        //[Authorize(policy: "Mozo")]
         [HttpPost("CambiarEstadoMesaYCalcularTotal/{codigoComanda}")]
         public async Task<ActionResult<float>> CambiarEstadoMesaYCalcularTotal(string codigoComanda)
         {
             return await _pedidoService.CambiarEstadoMesaYCalcularTotal(codigoComanda);
         }
 
-        [Authorize(policy: "Socio")]
+        //[Authorize(policy: "Socio")]
         [HttpPost("cerrar-mesa")]
         public async Task<IActionResult> CerrarMesa(string codigoComanda)
         {

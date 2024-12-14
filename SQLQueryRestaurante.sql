@@ -1,5 +1,5 @@
 
-use RestauranteC;
+use RestauranteProyecto;
 
 /****************************/
 insert into EstadoMesa(Descripcion)
@@ -15,7 +15,7 @@ select * from EstadoMesa
 /************************/
 insert into EstadoPedido(Descripcion)
   values
-		('pendiente')
+		('pendiente'),
 		('en preparacion'),
 		('listo para servir');
 		
@@ -89,6 +89,8 @@ values
 		(4,'Tiramisu',15,2500),
 		(4,'Helado',15,2500);
 select * from Productos;
+
+
 
 /* IMPORTANTE 3 
 Nota:
