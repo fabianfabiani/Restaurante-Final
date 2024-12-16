@@ -97,30 +97,5 @@ namespace Restaurante.Controllers
             return Ok(new { Message = "Mesa con la factura de menor importe", Mesa = mesaResponseDto });
         }
 
-        // Endpoint para obtener las mesas con mejores comentarios (por puntuación)
-        [HttpGet("getMesaMejoresComentarios")]
-        public async Task<ActionResult<List<MesaListarDTO>>> MesaMejoresComentarios()
-        {
-            var mesasResponseDto = await _mesaInformeService.MesaMejoresComentarios();
-            if (mesasResponseDto == null || !mesasResponseDto.Any())
-            {
-                return NotFound("No se encontraron mesas con buenos comentarios.");
-            }
-
-            return Ok(new { Message = "Mesas con mejores comentarios", Mesas = mesasResponseDto });
-        }
-
-        // Endpoint para obtener las mesas con peores comentarios (por puntuación)
-        [HttpGet("getMesaPeoresComentarios")]
-        public async Task<ActionResult<List<MesaListarDTO>>> MesaPeoresComentarios()
-        {
-            var mesasResponseDto = await _mesaInformeService.MesaPeoresComentarios();
-            if (mesasResponseDto == null || !mesasResponseDto.Any())
-            {
-                return NotFound("No se encontraron mesas con malos comentarios.");
-            }
-
-            return Ok(new { Message = "Mesas con peores comentarios", Mesas = mesasResponseDto });
-        }
     }
 }

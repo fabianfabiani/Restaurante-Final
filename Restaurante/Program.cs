@@ -33,6 +33,7 @@ builder.Services.AddAuthorization(options =>
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 //Servicios que agrego de la carpeta Service
+builder.Services.AddScoped<IEncuestaService, EncuestaService>();
 builder.Services.AddScoped<IMesaInforme, MesaInformeService>();
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 builder.Services.AddScoped<IComandaService, ComandaService>();

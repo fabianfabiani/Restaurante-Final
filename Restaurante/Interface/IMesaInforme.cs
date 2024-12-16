@@ -16,8 +16,5 @@ namespace Restaurante.Interface
 
         public Task<MesaListarDTO> MesaMenorFactura();
 
-        public Task<List<MesaListarDTO>> MesaMejoresComentarios();
-
-        public Task<List<MesaListarDTO>> MesaPeoresComentarios();
     }
 }

@@ -90,31 +90,6 @@ namespace Restaurante.Service
             return _mapper.Map<MesaListarDTO>(mesa);
         }
 
-        public async Task<List<MesaListarDTO>> MesaMejoresComentarios()
-        {
-            var encuestas = await _context.Encuestas
-                .OrderByDescending(e => e.Puntuacion)
-                .Take(5) // Las 5 mejores
-                .ToListAsync();
-
-            var mesas = encuestas.Select(async e => await _context.Mesas.FindAsync(e.MesaId)).ToList();
-
-            return _mapper.Map<List<MesaListarDTO>>(mesas);
-        }
-
-
-        public async Task<List<MesaListarDTO>> MesaPeoresComentarios()
-        {
-            var encuestas = await _context.Encuestas
-                .OrderBy(e => e.Puntuacion)
-                .Take(5) // Las 5 peores
-                .ToListAsync();
-
-            var mesas = encuestas.Select(async e => await _context.Mesas.FindAsync(e.MesaId)).ToList();
-
-            return _mapper.Map<List<MesaListarDTO>>(mesas);
-        }
-
     }
 }
 

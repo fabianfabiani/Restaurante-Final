@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "voMfAJxWHgZ23VISmmKaUlZ4ov6TBSvpki+JyTnHc5bhqMspDkd15JPOVSDCasvKgTqJhzW/Br2LW/QNpt6Y6Q==",
+  "dgSpecHash": "DEMKExLjz0VwYEwR2wOQxlQ0r7HFZqL7+r1IJJuUvVs2R03dGjXqLONo9hrFu+kTee0a2jzWkKD72u560ainRg==",
   "success": true,
-  "projectFilePath": "D:\\DocumentosD\\ISTEA\\5°cuatrimestre\\Lucas\\AWSRestauranteFinal\\AWSRestaurante\\AWSRestaurante\\Restaurante\\Restaurante\\Restaurante.csproj",
+  "projectFilePath": "D:\\DocumentosD\\ISTEA\\5°cuatrimestre\\Lucas\\Restaurante\\Restaurante\\Restaurante.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Oeste\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Oeste\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",

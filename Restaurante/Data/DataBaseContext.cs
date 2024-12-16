@@ -27,7 +27,7 @@ namespace Restaurante.Data
         public virtual DbSet<Sector> Sectores { get; set; }
         public virtual DbSet<EstadoPedido> EstadoPedido { get; set; }
         public virtual DbSet<Factura> Facturas { get; set; }
-        public virtual DbSet<Encuesta> Encuestas { get; set; }
+        public virtual DbSet<Encuesta> Encuesta { get; set; }
     }
 
 
